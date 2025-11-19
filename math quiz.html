@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThutoPula Maths Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <h1>🧠 ThutoPula Maths Quiz</h1>
+    <div class="emoji-banner">
+      <span class="emoji">➕</span>
+      <span class="emoji">➖</span>
+      <span class="emoji">✖️</span>
+      <span class="emoji">➗</span>
+      <span class="emoji">🧮</span>
+      <span class="emoji">🔢</span>
+      <span class="emoji">📐</span>
+      <span class="emoji">📊</span>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade R</h2>
+      <p class="question">1. What number comes after 2?</p>
+      <input type="text" id="q1" />
+      <button onclick="checkAnswer('q1', '3')">Submit</button>
+      <p class="feedback" id="f1"></p>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade 1</h2>
+      <p class="question">1. What is 2 + 3?</p>
+      <input type="text" id="q2" />
+      <button onclick="checkAnswer('q2', '5')">Submit</button>
+      <p class="feedback" id="f2"></p>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade 2</h2>
+      <p class="question">1. What is 10 - 4?</p>
+      <input type="text" id="q3" />
+      <button onclick="checkAnswer('q3', '6')">Submit</button>
+      <p class="feedback" id="f3"></p>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade 3</h2>
+      <p class="question">1. What is 5 × 3?</p>
+      <input type="text" id="q4" />
+      <button onclick="checkAnswer('q4', '15')">Submit</button>
+      <p class="feedback" id="f4"></p>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade 4</h2>
+      <p class="question">1. What is 36 ÷ 6?</p>
+      <input type="text" id="q5" />
+      <button onclick="checkAnswer('q5', '6')">Submit</button>
+      <p class="feedback" id="f5"></p>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade 5</h2>
+      <p class="question">1. What is the value of 2²?</p>
+      <input type="text" id="q6" />
+      <button onclick="checkAnswer('q6', '4')">Submit</button>
+      <p class="feedback" id="f6"></p>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade 6</h2>
+      <p class="question">1. Solve: 3 × (4 + 2)</p>
+      <input type="text" id="q7" />
+      <button onclick="checkAnswer('q7', '18')">Submit</button>
+      <p class="feedback" id="f7"></p>
+    </div>
+
+    <div class="quiz-block">
+      <h2>Grade 7</h2>
+      <p class="question">1. What is the square root of 49?</p>
+      <input type="text" id="q8" />
+      <button onclick="checkAnswer('q8', '7')">Submit</button>
+      <p class="feedback" id="f8"></p>
+    </div>
+
+    <script>
+      function checkAnswer(inputId, correctAnswer) {
+        const input = document.getElementById(inputId);
+        const feedback = document.getElementById("f" + inputId.slice(1));
+        const userAnswer = input.value.trim();
+
+        if (userAnswer === correctAnswer) {
+          feedback.textContent = "✅ Correct!";
+          feedback.style.color = "#8fd694";
+          input.disabled = true;
+        } else {
+          feedback.textContent = "❌ Try again!";
+          feedback.style.color = "#ff6b6b";
+        }
+      }
+    </script>
+    <button onclick="history.back()" class="go-back">🔙 Go Back</button>;
+  </body>
+  <div id="final-messages" class="final-box"></div>
+
+<script src="script.js"></script>
+
+</html>

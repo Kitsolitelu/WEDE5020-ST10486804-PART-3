@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="af">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz – Thutopula</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h2>🧠 Afrikaans Quiz</h2>
+
+      <div class="score-container">
+        Telling: <span id="score">0</span> / <span id="total-questions">7</span>
+      </div>
+
+      <div class="question" id="question1">
+        1. Voltooi die sin: <strong>'Ek ... in Pretoria - Noord'</strong>
+      </div>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'bly', 'question1')">
+          gelukkig
+        </button>
+        <button onclick="checkAnswer(this, 'bly', 'question1')">kwaad</button>
+        <button onclick="checkAnswer(this, 'bly', 'question1')">bly</button>
+        <button onclick="checkAnswer(this, 'bly', 'question1')">speel</button>
+      </div>
+
+      <div class="question" id="question2">2. Wat is 5 - 3 = ?</div>
+      <div class="options">
+        <button onclick="checkAnswer(this, '2', 'question2')">8</button>
+        <button onclick="checkAnswer(this, '2', 'question2')">2</button>
+        <button onclick="checkAnswer(this, '2', 'question2')">12</button>
+      </div>
+
+      <div class="question" id="question3">
+        3. Wat is die teenoorgestelde van <strong>'groot'</strong>?
+      </div>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'klein', 'question3')">klein</button>
+        <button onclick="checkAnswer(this, 'klein', 'question3')">
+          grooter
+        </button>
+        <button onclick="checkAnswer(this, 'klein', 'question3')">small</button>
+      </div>
+
+      <div class="question" id="question4">
+        4. Hoeveel dae is daar in 'n week?
+      </div>
+      <div class="options">
+        <button onclick="checkAnswer(this, '7', 'question4')">5</button>
+        <button onclick="checkAnswer(this, '7', 'question4')">7</button>
+        <button onclick="checkAnswer(this, '7', 'question4')">2</button>
+        <button onclick="checkAnswer(this, '7', 'question4')">12</button>
+      </div>
+
+      <div class="question" id="question5">
+        5. Wat is die meervoud van <strong>'boek'</strong>?
+      </div>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'boeke', 'question5')">boek</button>
+        <button onclick="checkAnswer(this, 'boeke', 'question5')">boeks</button>
+        <button onclick="checkAnswer(this, 'boeke', 'question5')">boeke</button>
+      </div>
+
+      <div class="question" id="question6">
+        6. Wat is die hoofstad van Suid-Afrika?
+      </div>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'Pretoria', 'question6')">
+          Kaapstad
+        </button>
+        <button onclick="checkAnswer(this, 'Pretoria', 'question6')">
+          Johannesburg
+        </button>
+        <button onclick="checkAnswer(this, 'Pretoria', 'question6')">
+          Durban
+        </button>
+        <button onclick="checkAnswer(this, 'Pretoria', 'question6')">
+          Pretoria
+        </button>
+      </div>
+
+      <div class="question" id="question7">
+        7. Wat is die Afrikaanse woord vir <strong>'apple'</strong>?
+      </div>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'appel', 'question7')">appel</button>
+        <button onclick="checkAnswer(this, 'appel', 'question7')">apple</button>
+        <button onclick="checkAnswer(this, 'appel', 'question7')">
+          piesang
+        </button>
+        <button onclick="checkAnswer(this, 'appel', 'question7')">
+          oranje
+        </button>
+      </div>
+
+      <p id="feedback"></p>
+
+      <div class="controls">
+        <button onclick="goBack()" class="go-back">🔙 Terug</button>
+        <button onclick="resetQuiz()" class="reset-btn">
+          🔄 Herbegin Quiz
+        </button>
+      </div>
+
+      <div id="final-messages" class="final-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

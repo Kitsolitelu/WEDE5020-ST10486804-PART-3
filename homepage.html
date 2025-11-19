@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>ThutoPula official Website</title>
+    <meta
+      name="description"
+      content="ThutoPula offers fun, interactive learning experiences for children with educational games, flashcards, quizzes, and study resources. Make learning enjoyable with our child-friendly platform."
+    />
+    <meta
+      name="keywords"
+      content="ThutoPula, kids learning, educational games, children education, interactive learning, South Africa tutoring, study resources, educational flashcards, learning platform"
+    />
+    <meta name="author" content="ThutoPula Educational Team" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="ThutoPula - Fun Learning Platform for Children"
+    />
+    <meta
+      property="og:description"
+      content="Interactive learning experiences with educational games, flashcards, and study resources for kids."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.thutopula.com/" />
+    <meta
+      property="og:image"
+      content="https://www.thutopula.com/images/thumbnail.jpg"
+    />
+    <meta property="og:site_name" content="ThutoPula" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ThutoPula - Interactive Learning for Kids"
+    />
+    <meta
+      name="twitter:description"
+      content="Fun educational games, flashcards, and study resources for children."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.thutopula.com/images/thumbnail.jpg"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.thutopula.com/" />
+
+    https://code.jquery.com
+    <!-- Enhanced Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self' 'unsafe-inline' https://unpkg.com https://code.jquery.com;
+               style-src 'self' 'unsafe-inline' https://unpkg.com;
+               img-src 'self' data: https:;
+               font-src 'self';
+               connect-src 'self';"
+    />
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="script.js" as="script" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "ThutoPula",
+        "description": "Interactive learning platform for children offering educational games, flashcards, and study resources",
+        "url": "https://www.thutopula.com",
+        "logo": "https://www.thutopula.com/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/thutopula",
+          "https://www.twitter.com/thutopula",
+          "https://www.instagram.com/thutopula"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+27-XXX-XXXX",
+          "contactType": "customer service"
+        },
+        "areaServed": "South Africa",
+        "educationalLevel": "Primary education"
+      }
+    </script>
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="header">
+      <!-- H1 for main page title -->
+      <h1 class="decorations" aria-label="Learning tools and resources">
+        📖 ☁️ 🎒 ✏️ 🌈
+      </h1>
+      <div class="logo" role="banner">
+        <span class="letter">T</span>
+        <span class="letter">h</span>
+        <span class="letter">u</span>
+        <span class="letter">t</span>
+        <span class="letter">o</span>
+        <span class="letter">P</span>
+        <span class="letter">u</span>
+        <span class="letter">l</span>
+        <span class="letter">a</span>
+      </div>
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="homepage.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="contact us.html">Contact Us</a>
+        <a href="enquiry.html">Make a Equiry</a>
+      </nav>
+      <br />
+      <div class="poster-wrapper">
+        <img
+          src="Diverse Smiles Around a Table.png"
+          alt="Diverse group of children learning together around a table in a classroom setting"
+          width="700"
+          height="400"
+          loading="eager"
+        />
+      </div>
+    </div>
+
+    <main id="main-content" role="main">
+      <div class="welcome-banner">
+        <!-- H2 for section title -->
+        <h2>Welcome to ThutoPula!</h2>
+        <p>Explore the wonderful world of learning!</p>
+      </div>
+
+      <section aria-labelledby="learning-section">
+        <!-- H2 for section title -->
+        <h2 id="learning-section" class="visually-hidden">
+          Learning Resources
+        </h2>
+        <table cellpadding="40" cellspacing="70">
+          <tr>
+            <td>
+              <div class="card learn-card">
+                📖
+                <a href="learn with me.html"><h3>Learn with Me</h3></a>
+              </div>
+            </td>
+            <td>
+              <div class="card quiz-card">
+                🍎📝
+                <a href="navigation to quiz.html"><h3>Quiz Time</h3></a>
+              </div>
+            </td>
+            <td>
+              <div class="card quotes-card">
+                ✏️
+                <a href="Motivational Quotess.html"
+                  ><h3>Motivational Quotes</h3></a
+                >
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <!-- Tabs Section -->
+      <section class="tabs-section" style="margin: 40px 0">
+        <h2>Learning Resources</h2>
+        <div class="tabs">
+          <button class="tab-button active" data-tab="tab1">Games</button>
+          <button class="tab-button" data-tab="tab2">Activities</button>
+          <button class="tab-button" data-tab="tab3">Resources</button>
+        </div>
+
+        <div id="tab1" class="tab-content" style="display: block">
+          <p>Interactive learning games coming soon!</p>
+        </div>
+        <div id="tab2" class="tab-content">
+          <p>Fun educational activities for children.</p>
+        </div>
+        <div id="tab3" class="tab-content">
+          <p>Additional learning resources and materials.</p>
+        </div>
+      </section>
+
+      <!-- Dynamic Content Area -->
+      <div id="dynamic-content"></div>
+      <!-- JavaScript Enhancements -->
+      <section id="interactive-section" aria-labelledby="interactive-heading">
+        <!-- H2 for section title -->
+        <h2 id="interactive-heading">Interactive Learning Section</h2>
+
+        <!-- Accordion -->
+        <div class="accordion-group">
+          <button class="accordion-btn" aria-expanded="false">
+            About ThutoPula
+          </button>
+          <div class="accordion-content">
+            <p>
+              ThutoPula is a tutoring website that helps learners grow through
+              fun and interactive learning experiences designed for children.
+            </p>
+          </div>
+
+          <button class="accordion-btn" aria-expanded="false">Our Goal</button>
+          <div class="accordion-content">
+            <p>
+              Our goal is to make education easier, creative, and enjoyable for
+              everyone through innovative learning methods.
+            </p>
+          </div>
+        </div>
+
+        <div class="search-section">
+          <label for="searchBox" class="visually-hidden"
+            >Search educational images</label
+          >
+          <input
+            type="text"
+            id="searchBox"
+            placeholder="Search educational images..."
+            aria-label="Search through our image gallery"
+          />
+        </div>
+
+        <div
+          class="gallery"
+          role="region"
+          aria-label="Educational image gallery"
+        >
+          <figure>
+            <img
+              src="kitso.jpg"
+              alt="the founder of thutopula"
+              width="220"
+              height="170"
+              loading="lazy"
+            />
+            <figcaption class="visually-hidden">Kitso Litelu</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="children'.png"
+              alt="happy aminated childeren"
+              width="220"
+              height="170"
+              loading="lazy"
+            />
+            <figcaption class="visually-hidden">
+              Animated happy children
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery" role="region" aria-label="Featured learning image">
+          <figure>
+            <img
+              src="Diverse Smiles Around a Table.png"
+              alt="Diverse children happily learning together around a classroom table"
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+            <figcaption class="visually-hidden">
+              Children learning together
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Lightbox -->
+        <div
+          id="lightbox"
+          class="lightbox"
+          role="dialog"
+          aria-labelledby="lightbox-title"
+          aria-hidden="true"
+        >
+          <span class="close" role="button" aria-label="Close image viewer"
+            >&times;</span
+          >
+          <img id="lightbox-img" class="lightbox-content" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with SEO references -->
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <p>&copy; 2025 ThutoPula Tutoring. All rights reserved.</p>
+        <p>
+          <a href="sitemap.xml">Sitemap</a> |
+          <a href="robots.txt">Robots.txt</a> |
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-of-service.html">Terms of Service</a>
+        </p>
+        <div class="social-links">
+          <a
+            href="https://facebook.com/thutopula"
+            aria-label="Follow us on Facebook"
+            >Facebook</a
+          >
+          <a
+            href="https://twitter.com/thutopula"
+            aria-label="Follow us on Twitter"
+            >Twitter</a
+          >
+          <a
+            href="https://instagram.com/thutopula"
+            aria-label="Follow us on Instagram"
+            >Instagram</a
+          >
+        </div>
+      </div>
+      <div id="map" style="height: 300px; margin-top: 40px"></div>
+    </footer>
+
+    <!-- Performance Monitoring -->
+    <script>
+      // Performance monitoring
+      window.addEventListener("load", function () {
+        // Log performance metrics
+        if ("performance" in window) {
+          const perfData = window.performance.timing;
+          const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+          console.log("Page load time:", loadTime + "ms");
+        }
+
+        // Lazy load non-critical images
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      });
+    </script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to top">↑</button>
+    <script src="script.js"></script>
+    <script src="jquery-scripts.js"></script>
+  </body>
+</html>

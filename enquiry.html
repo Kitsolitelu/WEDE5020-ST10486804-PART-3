@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make an Enquiry - ThutoPula</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* You may put this in CSS file */
+      .hidden {
+        display: none;
+      }
+      .selected {
+        border: 2px solid #4caf50;
+        background: #eef9ee;
+      }
+      .error {
+        color: red;
+        display: none;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Make an Enquiry</h1>
+        <p>
+          Interested in our services, products, or want to get involved? We'd
+          love to hear from you!
+        </p>
+      </div>
+
+      <div class="form-container">
+        <div class="form-section">
+          <h3>What would you like to enquire about?</h3>
+          <div class="enquiry-type">
+            <div class="enquiry-option" data-type="services">
+              <div class="enquiry-icon">🎓</div>
+              <h4>Educational Services</h4>
+            </div>
+
+            <div class="enquiry-option" data-type="products">
+              <div class="enquiry-icon">📚</div>
+              <h4>Learning Products</h4>
+            </div>
+
+            <div class="enquiry-option" data-type="volunteer">
+              <div class="enquiry-icon">🤝</div>
+              <h4>Volunteer</h4>
+            </div>
+
+            <div class="enquiry-option" data-type="sponsor">
+              <div class="enquiry-icon">💼</div>
+              <h4>Sponsorship</h4>
+            </div>
+          </div>
+
+          <input type="hidden" id="enquiryType" />
+
+          <div class="error" id="enquiryTypeError">
+            Please select an enquiry type.
+          </div>
+        </div>
+
+        <form id="enquiryForm">
+          <!-- PERSONAL INFO -->
+          <div class="form-section">
+            <h3>Your Information</h3>
+
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" />
+              <div class="error" id="nameError">Please enter a valid name.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" />
+              <div class="error" id="emailError">
+                Please enter a valid email.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+27 12 345 6789" />
+              <div class="error" id="phoneError">Invalid phone format.</div>
+            </div>
+          </div>
+
+          <!-- SERVICES SECTION -->
+          <div class="form-section hidden" id="servicesSection">
+            <h3>Service Details</h3>
+
+            <div class="form-group">
+              <label for="serviceType">Service Type *</label>
+              <select id="serviceType">
+                <option value="">Select a service</option>
+                <option value="online-courses">Online Courses</option>
+                <option value="tutoring">One-on-One Tutoring</option>
+                <option value="workshops">Educational Workshops</option>
+                <option value="curriculum">Curriculum Development</option>
+              </select>
+              <div class="error" id="serviceTypeError">Select a service.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="participants">Number of Participants *</label>
+              <input type="number" id="participants" min="1" value="1" />
+            </div>
+          </div>
+
+          <!-- PRODUCTS SECTION -->
+          <div class="form-section hidden" id="productsSection">
+            <h3>Product Details</h3>
+
+            <div class="form-group">
+              <label for="productInterest">Product Category *</label>
+              <select id="productInterest">
+                <option value="">Select category</option>
+                <option value="textbooks">Educational Textbooks</option>
+                <option value="software">Learning Software</option>
+                <option value="kits">STEM Kits</option>
+                <option value="resources">Teacher Resources</option>
+              </select>
+              <div class="error" id="productInterestError">
+                Select a product.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Quantity *</label>
+              <input type="number" id="quantity" min="1" value="1" />
+            </div>
+          </div>
+
+          <!-- VOLUNTEER SECTION -->
+          <div class="form-section hidden" id="volunteerSection">
+            <h3>Volunteer Information</h3>
+            <label>Preferred Role *</label>
+            <select id="volunteerRole">
+              <option value="">Select a role</option>
+              <option value="tutor">Academic Tutor</option>
+              <option value="mentor">Student Mentor</option>
+            </select>
+            <div class="error" id="volunteerRoleError">Select a role.</div>
+          </div>
+
+          <!-- SPONSOR SECTION -->
+          <div class="form-section hidden" id="sponsorSection">
+            <h3>Sponsorship Details</h3>
+            <label for="sponsorType">Sponsorship Type *</label>
+            <select id="sponsorType">
+              <option value="">Select type</option>
+              <option value="financial">Financial Support</option>
+              <option value="equipment">Equipment Resources</option>
+            </select>
+            <div class="error" id="sponsorTypeError">Select a type.</div>
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="form-section">
+            <h3>Additional Message *</h3>
+            <textarea id="message" rows="4"></textarea>
+            <div class="error" id="messageError">Minimum 20 characters.</div>
+          </div>
+
+          <button type="submit" class="btn">Submit Enquiry</button>
+        </form>
+
+        <div class="response-section hidden" id="responseSection">
+          <h3>Thank You for Your Enquiry!</h3>
+          <div id="responseContent"></div>
+          <button class="btn go-back" onclick="resetForm()">
+            Make Another Enquiry
+          </button>
+        </div>
+      </div>
+    </div>
+    <button onclick="goBack()" class="go-back">🔙 Go back</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

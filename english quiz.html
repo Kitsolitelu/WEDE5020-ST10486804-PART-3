@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz – Thutopula</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h2>🧠 English Quiz</h2>
+
+      <p class="question">
+        1. What is the past tense of <strong>'play'</strong>?
+      </p>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'Played')">Playing</button>
+        <button onclick="checkAnswer(this, 'Played')">Played</button>
+        <button onclick="checkAnswer(this, 'Played')">Plays</button>
+        <button onclick="checkAnswer(this, 'Played')">Will play</button>
+      </div>
+
+      <p class="question">
+        2. What is the future tense of <strong>'kick'</strong>?
+      </p>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'will kick')">Kicked</button>
+        <button onclick="checkAnswer(this, 'will kick')">will kick</button>
+        <button onclick="checkAnswer(this, 'will kick')">kicks</button>
+      </div>
+
+      <p class="question">3. What is the synonym of <strong>'good'</strong>?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'great')">better</button>
+        <button onclick="checkAnswer(this, 'great')">best</button>
+        <button onclick="checkAnswer(this, 'great')">great</button>
+      </div>
+
+      <p class="question">
+        4. What is the 2nd degree of <strong>'strong'</strong>?
+      </p>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'stronger')">strong</button>
+        <button onclick="checkAnswer(this, 'stronger')">stronger</button>
+        <button onclick="checkAnswer(this, 'stronger')">strongest</button>
+      </div>
+
+      <p class="question">
+        5. Fill in the missing verb:
+        <strong>Bongi ... home and does his homework</strong>
+      </p>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'went')">gots</button>
+        <button onclick="checkAnswer(this, 'went')">got</button>
+        <button onclick="checkAnswer(this, 'went')">went</button>
+        <button onclick="checkAnswer(this, 'went')">get</button>
+      </div>
+
+      <p class="question">
+        6. What is the opposite of <strong>'sits'</strong>?
+      </p>
+      <div class="options">
+        <button onclick="checkAnswer(this, 'stands')">stands</button>
+        <button onclick="checkAnswer(this, 'stands')">jump</button>
+        <button onclick="checkAnswer(this, 'stands')">walk</button>
+        <button onclick="checkAnswer(this, 'stands')">run</button>
+      </div>
+
+      <p id="feedback"></p>
+    </div>
+
+    <script>
+      function checkAnswer(button, correctAnswer) {
+        const allButtons = button.parentElement.querySelectorAll("button");
+        allButtons.forEach((btn) => (btn.disabled = true));
+
+        if (
+          button.textContent.trim().toLowerCase() ===
+          correctAnswer.toLowerCase()
+        ) {
+          button.classList.add("correct");
+          document.getElementById("feedback").textContent = "✅ Correct!";
+        } else {
+          button.classList.add("wrong");
+          document.getElementById("feedback").textContent =
+            "❌ Try again next time!";
+        }
+
+        setTimeout(() => {
+          document.getElementById("feedback").textContent = "";
+        }, 2000);
+      }
+    </script>
+    <button onclick="history.back()" class="go-back">🔙 Go Back</button>
+  </body>
+</html>
